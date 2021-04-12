@@ -1,0 +1,22 @@
+body {
+	color: #6e859c;
+	background: url(https://mk-website-media.s3.amazonaws.com/wp-content/uploads/2018/10/18214341/Wallpaper-Republic-RosesButterflies-1.jpg);
+}
+
+.grid {
+  width: 100%;
+  height: 1100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0px;  
+}
+
+.item {
+  border-radius: 100%;
+  background: #6e859c;
+}
+
+a:hover {
+  opacity: 0%;
+}

@@ -1,0 +1,30 @@
+    .child1{
+        border: solid red;
+        height: 50px;
+        width: 125px;
+        color: salmon;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    .navbar{
+        position:absolute;
+        display: flex;
+        height: 200px;
+        width: 100px;
+        justify-content: space-evenly;
+        animation-name: drive;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes drive{
+    from{
+        height: 6px;
+        width: 500px; 
+    }
+    to{
+    height: 6px;
+    width: 1000px;
+    }
+    }
+ 
