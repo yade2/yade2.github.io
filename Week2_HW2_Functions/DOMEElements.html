@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>DOME Elements</title>
+    </head>
+
+    <body>
+        <h1>Let's Go on Vacation</h1>
+        <p id="para1"></p>
+
+        <div id="myDiv">
+            <p>Fly Out to Cuba</p>
+        </div>
+        
+        <script>
+            var text="";
+            var div=document.getElementById("myDiv");
+            var para=document.createElement("p");
+            var node=document.createTextNode("Ride in a vintage car");
+            para.append(node);
+
+            var strong=document.createElement("strong");
+            node=document.createTextNode("around Havana");
+
+            strong.appendChild(node);
+
+            div.append(para,strong, " sipping mojitos");
+        </script>
+
+
+    </body>
+    </html>
