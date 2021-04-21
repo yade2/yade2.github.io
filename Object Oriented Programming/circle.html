@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <h1 id="Area of a circle"></h1>
+        <p id="p1"></p>
+
+        <br>
+
+
+
+        <script>
+            var text="<ul>";
+
+        class Circle {
+            constructor(radius) {
+            this.radius = radius;
+        }
+     
+        calculateArea() {
+            this.area = 3.14 * (this.radius * this.radius);
+        }
+        circle_Area() {
+            text = text + "<li>" + "Area of this circle is " + this.area + "</li>";
+            }
+        }
+     
+        const circle1 = new Circle(4);
+        circle1.calculateArea()
+        circle1.circle_Area()
+
+        const circle2 = new Circle(6);
+        circle2.calculateArea()
+        circle2.circle_Area()
+
+        const circle3 = new Circle(2);
+        circle3.calculateArea()
+        circle3.circle_Area()
+
+
+        text += "</ul>"
+
+        document.getElementById("p1").innerHTML = "Area of this circle is " + text
+
+    </script>
+    </body>
+</html>

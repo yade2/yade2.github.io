@@ -1,0 +1,108 @@
+<html>
+    <body>
+        <h1 id="Per Scholas RTT"></h1>
+        <p id="p1"></p>
+
+        <br>
+
+        <p id="p2"></p>
+
+        <script>
+            var text="<ul>";
+        
+            const RTT="<u>"+"Per Scholas: Software Engineering Students"+"</u>";
+            var idNum=0;
+            document.getElementById("Per Scholas RTT").innerHTML=RTT;
+
+            class Students {
+                static count = 0
+                constructor(fname, lname, address, phone,email){
+                    this.fname = fname;
+                    this.lname = lname;
+                    this.address = address;
+                    this.phone = phone;
+                    this.email = email;
+                    this.id = ++idNum;
+                }
+                
+                static countStudents() {
+                    Students.count++;
+
+                }
+                getStudentFullName() {
+                    let fullname = this.fname +" "+ this.lname;
+                    this.fullname = fullname;
+                }
+
+                displayStudents() {
+                    text = text + "<li>" + this.fullname +" "+ this.id + "</li>";
+                    return text;
+                }
+
+                calculateAverage(l,m,n) {
+                    let sum =l + m + n;
+                    text = text + "Average " + sum/arguments.length
+
+                } 
+
+
+            }
+
+            
+
+            const stu1 = new Students("Yadelin", "Gil");
+            stu1.getStudentFullName();
+            stu1.displayStudents();
+            stu1.calculateAverage(90,85,90);
+            Students.countStudents();
+            
+            const stu2 = new Students("Santa", "Chakraborty");
+            stu2.getStudentFullName();
+            stu2.displayStudents();
+            stu2.calculateAverage(75,90,80);
+            Students.countStudents();           
+
+
+            const stu3 = new Students("Julian", "Molina");
+            stu3.getStudentFullName();
+            stu3.displayStudents();
+            stu3.calculateAverage(92,82,100);
+            Students.countStudents();
+
+            
+            const stu4 = new Students("Rehan", "Khan");
+            stu4.getStudentFullName();
+            stu4.displayStudents();
+            stu4.calculateAverage(79,83,95);
+            Students.countStudents();
+
+           
+            const stu5=new Students("Malykanima", "Jackson");
+            stu5.getStudentFullName();
+            stu5.displayStudents();
+            stu5.calculateAverage(88,89,97);
+            Students.countStudents();
+
+           
+            const stu6=new Students("Colton", "Wright");
+            stu6.getStudentFullName();
+            stu6.displayStudents();
+            stu6.calculateAverage(100,100,86);
+            Students.countStudents();
+
+            
+            const stu7=new Students("Bryan", "Concepcion");
+            stu7.getStudentFullName();
+            stu7.displayStudents();
+            stu7.calculateAverage(98,88,71);
+            Students.countStudents();
+
+            
+            text=text+"</ul>";
+            document.getElementById("p1").innerHTML=text;
+            document.getElementById("p2").innerHTML= "The total number of students in this breakout room is "+ Students.count;
+        
+    
+        </script>
+    </body>
+</html>
