@@ -1,0 +1,95 @@
+<html>
+    <body>
+        <h1 id="Per Scholas RTT"></h1>
+        <p id="p1"></p>
+
+        <br>
+
+        <p id="p2"></p>
+
+        <script>
+            var text="<ul>";
+        
+            const RTT="<u>"+"Per Scholas: Software Engineering Students"+"</u>";
+            var idNum=0;
+            document.getElementById("Per Scholas RTT").innerHTML=RTT;
+
+            
+            class Specialty {
+                constructor(spec) {
+                    this.spec=spec;
+                }
+                getSpecialty() {
+                text = text + this.spec + "</li>"
+            }
+        }
+            
+            
+            
+            class Students extends Specialty{
+                static count = 0
+                constructor(fname, lname, spec) {
+                    super(spec);
+                    this.fname = fname;
+                    this.lname = lname;
+                    this.id = ++idNum;
+                }
+                
+                static countStudents() {
+                    Students.count++;
+
+                }
+                getStudentFullName() {
+                    let fullname = this.fname +" "+ this.lname;
+                    this.fullname = fullname;
+                }
+
+                displayStudents() {
+                    text = text + "<li>" + this.fullname +" is an expert in ";
+                    
+                }
+
+
+            }
+
+            
+
+            const stu1 = new Students("Yadelin", "Gil", "App Development");
+            stu1.getStudentFullName();
+            stu1.displayStudents();
+            stu1.getSpecialty();
+            Students.countStudents();
+            
+            const stu2 = new Students("Santa", "Chakraborty", "Web Development");
+            stu2.getStudentFullName();
+            stu2.displayStudents();
+            stu2.getSpecialty();
+            Students.countStudents();           
+
+
+            const stu3 = new Students("Carlos", "Ramirez", "Javascript");
+            stu3.getStudentFullName();
+            stu3.displayStudents();
+            stu3.getSpecialty();
+            Students.countStudents();
+
+            
+            const stu4 = new Students("Joshua", "Mendoza", "C++");
+            stu4.getStudentFullName();
+            stu4.displayStudents();
+            stu4.getSpecialty();
+            Students.countStudents();
+
+        
+
+        
+
+            
+            text=text+"</ul>";
+            document.getElementById("p1").innerHTML=text;
+            document.getElementById("p2").innerHTML= "The total number of students in this breakout room is "+ Students.count;
+        
+    
+        </script>
+    </body>
+</html>
